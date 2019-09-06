@@ -4,8 +4,8 @@ state("Client") {
 
 startup {
     settings.Add("Main Stages", true);
-	settings.SetToolTip("Main Stages", "Splits when a stage is finished");
-	
+    settings.SetToolTip("Main Stages", "Splits when a stage is finished");
+
     settings.Add("Good Ending", true);
     settings.Add("Bad Ending", false);
 
@@ -14,24 +14,24 @@ startup {
         new[] { "01_Ambush",        "The Ambush",                 null,       "Main Stages" },
         new[] { "02_Quarters",      "Calm Before The Storm",      null,       "Main Stages" },
         new[] { "03_MCA_Dock",      "Mission Briefing",           "default",  "Main Stages" },
-        new[] { "04_Shuttlebay",    "Shuttle Bay Cutscene",       null,	      "Main Stages" },
-        new[] { "05_LZ_Monitaur",   "The Storm",                  "default",  "Main Stages" },
+        new[] { "04_shuttlebay",    "Shuttle Bay Cutscene",       null,       "Main Stages" },
+        new[] { "05_lz_minotaur",   "The Storm",                  "default",  "Main Stages" },
         new[] { "06_Entrance",      "Approach",                   "default",  "Main Stages" },
         new[] { "07_Avernus1",      "City Of Ghosts",             "default",  "Main Stages" },
-        new[] { "08_Airshafts",     "High And Low",               "default",  "Main Stages" },
-        new[] { "09_Comm1",         "Infiltration",               "default",  "Main Stages" },
+        new[] { "08_airshafts",     "High And Low",               "default",  "Main Stages" },
+        new[] { "09_comm1",         "Infiltration",               "default",  "Main Stages" },
         new[] { "10_Comm2",         "A Familiar Voice",           "default",  "Main Stages" },
         new[] { "12_Comm3",         "Escape",                     "default",  "Main Stages" },
         new[] { "13_New_MCA",       "Once a Thief",               "default",  "Main Stages" },
         new[] { "14_Maritropa1",    "Public Nuisance",            "default",  "Main Stages" },
-        new[] { "15_Depot",         "MEV Depot 17",               "default",  "Main Stages" },
+        new[] { "15_depot",         "MEV Depot 17",               "default",  "Main Stages" },
         new[] { "16_Slums",         "Maritropa Slums",            "default",  "Main Stages" },
         new[] { "17_Lost_Cat",      "Lost Cat",                   null,       "Main Stages" },
         new[] { "18_Slums",         "Maritropa Slums II",         null,       "Main Stages" },
         new[] { "19_Rendezvous",    "The Mecca",                  "default",  "Main Stages" },
         new[] { "20_Maritropa1",    "Shanira District",           "default",  "Main Stages" },
-        new[] { "21_Maritropa2",    "City On Fire",               "default",  "Main Stages" },
-        new[] { "22_Tram",          "Downtown Train",             null,       "Main Stages" },
+        new[] { "21_maritropa2",    "City On Fire",               "default",  "Main Stages" },
+        new[] { "22_tram",          "Downtown Train",             null,       "Main Stages" },
         new[] { "24_CMC-Sec1",      "The Favor",                  "default",  "Main Stages" },
         new[] { "25_CMC_Sec2",      "Rescue Attempt",             null,       "Main Stages" },
         new[] { "26_Tram",          "Runaway Train",              "default",  "Main Stages" },
@@ -45,7 +45,7 @@ startup {
 
         new[] { "34_Spires",        "Unnexpected Complications",  "default",  "Good Ending" },
         new[] { "35_Fortress",      "The Hidden Fortress",        "default",  "Good Ending" },
-        new[] { "36_Elevator",      "Baku",                       "default",  "Good Ending" },
+        new[] { "36_elevator",      "Baku",                       "default",  "Good Ending" },
         new[] { "37_Gabriel",       "Brother's Keeper",           "default",  "Good Ending" },
 
         new[] { "34_Energy_Plant",  "Belly of the Beast",         null,       "Bad Ending"  },
