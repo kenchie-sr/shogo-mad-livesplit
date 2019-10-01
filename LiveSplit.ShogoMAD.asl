@@ -1,5 +1,7 @@
 state("Client") {
     string16 stage : 0x89D74, 0x12C, 0x694;
+    vars.last_split = "00";
+    vars.just_reset = false;
 }
 
 startup {
@@ -59,16 +61,34 @@ startup {
     }
 }
 
-start {
-    // If we entered 01_Ambush, we're starting the timer
-    if ((current.stage == vars.stages[0][0]) && (current.stage != old.stage)) {
+reset {
+    if ((current.stage == vars.stages[0][0]) && vars.last_split.CompareTo(vars.stages[0][0]) > 0) {
+        vars.just_reset = true;
         return true;
     }
+
+    return false;
+}
+
+start {
+    if (vars.just_reset) {
+        vars.just_reset = false;
+        return true;
+    }
+
+    // If we entered 01_Ambush, we're starting the timer
+    if ((current.stage == vars.stages[0][0]) && (current.stage != old.stage)) {
+        vars.last_split = vars.stages[0][0]
+        return true;
+    }
+
+    return false;
 }
 
 split {
     // If we've changed stage, split if the old stage was ticked
-    if (current.stage != old.stage) {
+    if (current.stage != old.stage && (current.stage.CompareTo(vars.last_split) > 0)) {
+        vars.last_split = current.stage;
         return settings[old.stage];
     }
 }
