@@ -1,10 +1,11 @@
 state("Client") {
     string16 stage : 0x89D74, 0x12C, 0x694;
-    vars.last_split = "00";
-    vars.just_reset = false;
 }
 
 startup {
+    vars.last_split = "00";
+    vars.just_reset = false;
+
     settings.Add("Main Stages", true);
     settings.SetToolTip("Main Stages", "Splits when a stage is finished");
 
