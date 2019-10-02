@@ -78,7 +78,7 @@ start {
 
     // If we entered 01_Ambush, we're starting the timer
     if ((current.stage == vars.stages[0][0]) && (current.stage != old.stage)) {
-        vars.last_split = vars.stages[0][0]
+        vars.last_split = vars.stages[0][0];
         return true;
     }
 
